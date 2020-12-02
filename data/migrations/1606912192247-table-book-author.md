@@ -22,7 +22,7 @@ SELECT COUNT(*) FROM books;
 ```
 ***It must show us a 12 rows.***
 Also, we run the repo locahost to check that all the codes inside the repo is working perfectly and it takes the data from the lab14 database.
-[figure1]()
+![figure1](home-page.png)
 
 - "lab14_normal" Table
 First, we restart the psql shell and type the following command that will create a new database and migrate all of the queries from the "lab14" database into the new one "lab13_normal" by the following scripts in the terminal.
@@ -66,3 +66,8 @@ ALTER TABLE books DROP COLUMN author;
 ```
 ALTER TABLE books ADD CONSTRAINT fk_authors FOREIGN KEY (author_id) REFERENCES authors(id);
 ```
+
+***Here, how the books and authors ahould looks in the terminal.***
+
+![figure2](authors.png)
+![figure3](books.png)
