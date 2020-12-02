@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+</head>
+<body>
+    <%- include('../../layout/header') %>
+
+    <div class="section">
+        <p>Search by Title or Author</p>
+    </div>
+    <form action="/searches" method="post">
+        <input type="text" name="searchEngine" id="">
+        <label>title<input type="radio" name="category" value="intitle" id=""></label>
+        <label>author<input type="radio" name="category" value="inauthor" id=""></label>
+        <button>Search for the Google Books API</button>
+    </form>
+
+    <%- include('../../layout/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>

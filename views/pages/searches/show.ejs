@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Google Books API</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/reset.css">
+</head>
+<body>
+    <%- include('../../layout/header') %>
+    <div class="section">
+        <p>Search Results</p>
+    </div>
+    <section>
+        <% book.forEach(value=>{ %>
+            <div class="book-container">
+                <img src="<%= value.image %>" alt="">
+                <h2><%= value.title %></h2>
+                <h3><%= value.author %></h3>
+                <p class="isbn"><%= value.isbn %></p>
+                <p class="desc"><%= value.description %></p>
+                <form action="/books" method="post"> 
+                    <input type="hidden" name="image_url" value="<%= value.image %>">
+                    <input type="hidden" name="title" value="<%= value.title %>">
+                    <input type="hidden" name="author" value="<%= value.author %>">
+                    <input type="hidden" name="description" value="<%= value.description %>">
+                    <input type="hidden" name="isbn" value="<%= value.isbn %>">
+                    <button type="submit">Select this Book</button>
+                </form>
+            </div>
+        <% }) %>
+
+    </section>
+    <%- include('../../layout/footer') %>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>

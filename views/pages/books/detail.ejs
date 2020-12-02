@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Selected Book Detail</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+</head>
+<body>
+    <%- include('../../layout/header') %>
+    <section>
+            <div class="book-container">
+                <img src="<%= books.image_url %>" alt="">
+                <h2><%= books.title %></h2>
+                <h3><%= books.author %></h3>
+                <p class="isbn"><%= books.isbn %></p>
+                <p class="desc"><%= books.description %></p>
+                <button id="showUpdateForm">update details</button>
+                <button id="btnDel">Delete Book</button>
+                <div id="popupMessage">
+                    <div id="message-content">
+
+                        <p>Are sure that you want to delete this book</p>
+                        <button id="btnNo">No</button>
+                        <form action="/books/<%= books.id %>?_method=delete" id="" method="post">
+                            <button>Yes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <%- include('edit') %>
+    </section>
+    <%- include('../../layout/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>

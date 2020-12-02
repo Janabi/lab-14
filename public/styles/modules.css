@@ -1,0 +1,49 @@
+.hamburger div {
+    cursor: pointer;
+    text-align: right;
+    width: 25px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 1px;
+}
+
+nav.list ul li a{
+    color: #fff !important;
+    display: block;
+    padding: 13px;
+    font-size: larger;
+}
+
+nav.list ul li a:hover{
+    background-color: gray;
+}
+
+.book-container img {
+    margin: 5px auto;
+    display: block;
+    width: 40%;
+}
+
+.book-container h2,
+.book-container h3 {
+    text-align: center;
+}
+
+.book-container h2 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.book-container p {
+    margin-top: 10px;
+}
+
+.show-detail{
+    display: block;
+    margin: 10px auto;
+    width: 40%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
