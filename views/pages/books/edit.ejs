@@ -3,7 +3,8 @@
 
         <input type="text" name="image_url" value="<%= books.image_url %>">
         <input type="text" name="title" value="<%= books.title %>">
-        <input type="text" name="author" value="<%= books.author %>">
+        <input type="text" name="name" value="<%= books.name %>">
+        <input type="hidden" name="author_id" value="<%= books.author_id %>">
         <textarea type="text" name="description"><%= books.description %></textarea>
         <input type="text" name="isbn" value="<%= books.isbn %>">
         <button type="submit">Update Book</button>
